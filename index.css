@@ -1,0 +1,19 @@
+html{
+	margin: 0;
+	height: 100%;
+}
+body{
+	align-items: center;
+	background-color: #202020;
+	display: flex;
+	margin: 0;
+	height: 100%;
+}
+canvas{
+	border: solid 2px #fff;
+	border-left: none;
+	border-right: none;
+	image-rendering: pixelated;
+	height: 100%;
+	margin: 0 auto;
+}
