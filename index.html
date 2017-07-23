@@ -5,6 +5,9 @@
 <!-- your webpage info goes here -->
     <meta charset="UTF-8" />
     <title>Tetris</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     body {
         background: #202028;
@@ -15,8 +18,16 @@
     }
     canvas {
         border: solid .2em #fff;
-        height: 90vh;
+        height: 80vh;
     }
+    button{
+    	display: inline;
+    	text-align:center;
+    }
+	button{
+		width: 10%;
+		height: auto;
+	}
     </style>
 	<!--<link rel="stylesheet" href="index.css"> -->
 	<meta name="author" content="Gaurav Jain(cdj)" />
@@ -25,7 +36,9 @@
 </head>
 <body>
 	<div id= "score"></div>
-	<canvas id="tetris" width="240" height="400"/>
+	<canvas id="tetris" width="240" height="400"></canvas>
+	<div id="gamepad" class = "container-fluid"></div>
 	<script type="text/javascript" src="tetris.js"></script>
+	
 </body>
 </html>
