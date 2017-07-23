@@ -238,6 +238,15 @@ updateScore();
 document.getElementById('score').innerHTML = "CLICK TO PLAY";
 canvas.addEventListener('click',event =>{
 	drawPiece(player.matrix,player.pos);
+	console.log(event);
 	update();
 	updateScore(0);
 });
+
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+	document.getElementById('gamepad').innerHTML = "<div id =\"row1\" class=\"row\"><i class=\"fa fa-undo btn btn-primary\" onclick =\"playerRotate(-1);\" aria-hidden=\"true\"></i><i class=\"fa fa-repeat btn btn-primary\"  onclick =\"playerRotate(1);\" aria-hidden=\"true\"></i></div><br><div id =\"row2\" class=\"row\"><button id=\"left\" onclick=\"playerMove(-1)\" class=\"btn btn-primary\"><</button><button id=\"down\" onclick=\"playerDrop()\"class=\"btn btn-primary\">v</button><button id=\"right\" onclick=\"playerMove(1)\"class=\"btn btn-primary\">></button>"
+}   
+else{
+	document.getElementById('gamepad').innerHTML = "Use Q And W to Rotate" ;
+}
